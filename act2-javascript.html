@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript task</title>
+
+    <script>
+        //Below is the 5 string methods
+        let string1 = "this is a string";
+        let length = string1.length;
+        let part = string1.slice(10);
+        let bigpart = part.toUpperCase();
+        let string2 = string1.replace(part, bigpart)
+        //Show the 5 string methods in an alert
+        function Strings() {
+            alert("string: " + string1 + 
+            "\nstring length: " + length +
+            "\npart of string: " + part + 
+            "\ncapital part of string: " + bigpart +
+            "\nreplaced part of string: "+ string2);
+         }
+         //5 Number methods
+         let num = 3.14;
+         let stringnum = num.toString();
+         let exnum = num.toExponential();
+         let fixednum = num.toFixed();
+         let stringtonum = stringnum.valueOf();
+        //Show the 5 num methods in an alert
+        function Numbers() {
+            alert("Number: " + num + 
+            "\nnum + num = " + (num + num) +
+            "\nNumber as string: " + stringnum +
+            "\nstr + str = " + (stringnum + stringnum) +
+            "\nExponential number: " + exnum + 
+            "\nFixed number: " + fixednum +
+            "\nGet value of string: " + stringtonum);
+         }
+        //5 Array methods
+        const numarr = [1, 10, 100];
+        let nalen = numarr.length;
+        const strarr = ["one", "ten", "one hundred", "one thousand"];
+        let salen = strarr.length;
+        let nastring = numarr.toString();
+        let combinedarr = numarr.concat(strarr);
+
+        //Show the 5 array methods in an alert
+        function Arrays() {
+            alert("Number array: " + numarr + 
+            "\nString array: " + strarr +
+            "\nLength of number array: " + nalen + 
+            "\nLength of string array: " + salen +
+            "\nCombined array: " + combinedarr +
+            "\nContinue to make changes to the above arrays");
+
+            numarr.push(1000);
+            strarr.pop();
+
+            alert("\nAdd 1000 to end of number array: " + numarr +
+            "\nRemove last value from string array: " + strarr
+            )
+         }
+
+        //Date formats
+        
+        const year = new Date("2023");
+        const yearmonth = new Date("2023-08");
+        const fulldate = new Date("2023-08-20");
+        const datetime = new Date("2002-08-14T12:43:26Z");
+        const shortdate = new Date("01/21/2001");
+        const longdate = new Date("August 12 2011");
+
+        function Dates() {
+            alert("Year date: " + year +
+            "\nYear & Month: " + yearmonth +
+            "\nFull date: " + fulldate +
+            "\nDate & Time: " + datetime +
+            "\nShort date: " + shortdate +
+            "\nLong date: " + longdate)
+        }
+
+        function OtherFunction() {
+            const nowdate = new Date();
+            document.body.innerHTML = "<p>Goodbye buttons. Today's date is: " + nowdate + "</p>"
+        }
+
+
+    </script>
+</head>
+<body>
+    <input type = "button" onclick = "Strings();" name = "ok" value = "Strings" />
+    <input type = "button" onclick = "Numbers();" name = "ok" value = "Numbers" />
+    <input type = "button" onclick = "Arrays();" name = "ok" value = "Arrays" />
+    <input type = "button" onclick = "Dates();" name = "ok" value = "Dates" />
+    <input type = "button" onclick = "OtherFunction();" name = "ok" value = "Other Function" />
+</body>
+</html>
